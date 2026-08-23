@@ -31,13 +31,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r docs/requirements.txt
 
-      - name: Auto-generate rules.rst (optional)
-        run: |
-          cd docs
-          if [ -f docs/gen_rules_rst.py ]; then
-            python docs/gen_rules_rst.py
-          fi
-
       - name: Build Sphinx HTML Docs
         run: |
           python -m sphinx -b html docs/source docs/build/html
