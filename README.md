@@ -40,13 +40,15 @@ FCOVLint/
 │   ├── fcovlint.py                   # Main executable CLI
 │   └── verible_verilog_syntax.py     # Verible Python bindings
 ├── docs/                             # Sphinx documentation source
-├── src/
-│   ├── af_lint_rule.py               # Base rule class (AsFigoLintRule)
-│   ├── asfigo_linter.py              # Core linter engine
-│   └── rules/                        # Functional coverage rules
-│       ├── __init__.py
-│       └── af_fcov_*.py
-└── tests/                            # Pass/fail testcases (.sv)
+├── examples/                         # Example pass/fail SV files
+│   ├── Makefile
+│   ├── test_fcov_007_f.sv            # Violation example
+│   └── test_fcov_007_p.sv            # Compliant example
+└── src/
+    ├── af_lint_rule.py               # Base rule class (AsFigoLintRule)
+    ├── asfigo_linter.py              # Core linter engine
+    └── rules/                        # Functional coverage rules
+        └── af_fcov_*.py
 
 ## Installation
 
@@ -72,7 +74,7 @@ FCOVLint/
 Run the linter against a SystemVerilog target file from your project root:
 
 ```bash
-python3 bin/fcovlint.py -t tests/test_fcov_001_f.sv
+python3 bin/fcovlint.py -t examples/test_fcov_007_f.sv
 ```
 
 ---
@@ -93,7 +95,7 @@ class MyCustomRule(AsFigoLintRule):
         pass
 ```
 
-3. Re-run `python3 docs/gen_rules_rst.py` to auto-include your new rule in the documentation build.
+3. Add a corresponding entry in `docs/source/rules.rst` documenting the rule rationale, violation example, correct usage, and severity.
 
 ---
 
