@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 # ----------------------------------------------------
 
-FCOVLINT = python3 ../bin/fcovlint.py
+FCOVLINT = python3 ../../bin/fcovlint.py
 
 all: run_f run_p
 
