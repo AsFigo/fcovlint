@@ -2,14 +2,15 @@
 # SPDX-FileCopyrightText: AsFigo Technologies, UK
 # SPDX-FileCopyrightText: VerifWorks, India
 # SPDX-License-Identifier: MIT
+# Author: Miles Huang
 # ----------------------------------------------------
 
 from af_lint_rule import AsFigoLintRule
 import logging
 import anytree
 
-class FCOVCoverGroupNaming(AsFigoLintRule):
-    """Checks if covergroup follows a naming convention - start with "cg_" """
+class FcovCgNaming(AsFigoLintRule):
+    """Checks if covergroup follows a naming convention - start with "cg_" or ends with "_cg" """
 
     def __init__(self, linter):
         self.linter = linter

@@ -36,7 +36,7 @@ from rules.af_fcov_perf_cr_abin_max import FcovPerfUseCrAbinMax
 from rules.af_fcov_no_cr_abmax_vlt import FcovNoCrAbinMaxVlt
 from rules.af_fcov_no_merg_inst import FcovNoMergeInstances
 from rules.af_fcov_no_goal_opt import FcovNoGoalInCode
-from rules.af_fcov_cg_naming import FCOVCoverGroupNaming
+from rules.af_fcov_cg_naming import FcovCgNaming
 
 class FCOVLinter(AsFigoLinter):
     """Linter that applies functional coverage lint rules on SystemVerilog code."""
